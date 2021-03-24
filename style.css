@@ -21,12 +21,19 @@ body {
 h1 {
   font: bold 34px/120% Georgia, serif;
 }
+h4 {
+  margin: 3px;
+}
 section {
   margin-top: 1em;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+section:nth-of-type(2){
+background-color: antiquewhite;
+flex-direction: row;
 }
 input[type="number"] {
   height: 2.2em;
