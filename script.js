@@ -1,15 +1,21 @@
 // select the elements
-const initialVal = document.querySelector('#input1')
-const finalVal = document.querySelector('#input2')
+const input1 = document.querySelector('#input1')
+const input2 = document.querySelector('#input2')
 const calcButton = document.querySelector('#btn')
+const output = document.querySelector('.output')
 
 // event listeners
-initialVal.addEventListener('keyup', function () {
+input1.addEventListener('keyup', calculateChange)
+input2.addEventListener('keyup', calculateChange)
+calcButton.addEventListener('click', calculateChange)
 
-})
-finalVal.addEventListener('keyup', function () {
+// function
+function calculateChange() {
+    let initialVal = input1.value
+    let finalVal = input2.value
 
-})
-calcButton.addEventListener('click', function () {
+    let calc = (finalVal - initialVal)/ initialVal
+    let result = calc * 100
 
-})
+    output.innerText = "Percentage change = " + result.toFixed(3) + "%"
+}
